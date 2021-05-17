@@ -3,7 +3,7 @@
 本專案目的為使用過去發電量以及用電量資料建構一長短期記憶（Long Short-Term Memory，LSTM）模型，用過去七天的資料預測未來一天的用電情形，並將結果用於DSAI課程中電力交易之系統。
 
 ## 使用環境
-本專案之開發環境如下表所示，並提供[**requirements.txt**](https://github.com/vf19961226/DSAI_HW3/tree/main/requirements.txt)以及[**Pipfile**](https://github.com/vf19961226/DSAI_HW3/tree/main/Pipfile)方便安裝環境。
+本專案之開發環境如下表所示，並提供[**requirements.txt**](https://github.com/vf19961226/DSAI_HW3/blob/main/requiretments.txt)以及[**Pipfile**](https://github.com/vf19961226/DSAI_HW3/tree/main/Pipfile)方便安裝環境。
 
 |Package|Version|
 |:---:|:---:|
