@@ -52,6 +52,7 @@ train_data.columns = [''] * len(train_data.columns)
 ![structure](https://github.com/vf19961226/DSAI_HW3/blob/main/figure/structure.png) 
 
 4. 訓練結果
+* LOSS 函數入下圖所示
 ![RS](https://github.com/vf19961226/DSAI_HW3/blob/main/figure/RS.png)
 
 ## 交易邏輯
