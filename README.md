@@ -38,6 +38,7 @@
 ![RS surplus power](https://github.com/vf19961226/DSAI_HW3/blob/main/figure/RS_Surplus_Power.png "RS surplus power")  
 
 ## 模型訓練
+使用[**elect2.py**](https://github.com/vf19961226/DSAI_HW3/blob/main/elect2.py)於colab中訓練模型。其詳細步驟如下列所述。    
 1. 將上述預處理之成果輸出成CSV檔以利後續訓練。
 * 為csv檔加入表頭["Number", "RS"]。
 * 刪除"Number"列並選取最後n列作為未來預測用途。
