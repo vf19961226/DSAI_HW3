@@ -26,6 +26,30 @@
 ![RS surplus power](https://github.com/vf19961226/DSAI_HW3/blob/main/figure/RS_Surplus_Power.png "RS surplus power")  
 
 ## 模型訓練
+1. 將上述預處理之成果輸出成CSV檔以利後續訓練。
+* 為csv檔加入表頭["Number", "RS"]。
+* 刪除"Number"列並選取最後n列作為未來預測用途。
+```py
+train_data = pd.read_csv("/content/gdrive/MyDrive/DSAI_HM3/RS_sur.csv")
+train_data.columns=["Number", "RS"]
+train_data = train_data.drop(columns=["Number"])
+train_data = train_data.iloc[-24:] #讀最後24條
+train_data = train_data.reset_index(drop=True)#刪除索引
+train_data.columns = [''] * len(train_data.columns)
+```
+2. 分割資料集
+* 最後輸出 x_train - 三維數值，其直各為(N比數值,天數,數值）＝(262221, 24, 1)
+* 最後輸出 y_train - 二維數值，其直各為(N比數值,數值）＝ (262221, 24)
+```py
+  X_train, Y_train = [], []
+    for i in range(train.shape[0]-futureDay-pastDay):
+      X_train.append(np.array(train.iloc[i:i+pastDay])) #分割訓練集      
+      Y_train.append(np.array(train.iloc[i+pastDay:i+pastDay+futureDay]["RS"])) #分割輸出label
+```
+3. 建構模型
+輸入層：24*1
+輸出層：24*1
+
 
 ## 交易邏輯
 使用上述模型訓練出之模型進行淨用電量預測，當預測出淨用電量為負的，則需要購買電以補足缺口，而購買價格需比市場電價電價來得低，目前市場電價1度約為2.5元新台幣。當預測出淨用電量為正，則代表有多餘的電力可以出售，而出售價格訂定為1度1新台幣。期望達成淨用電量為0的目標。
