@@ -47,8 +47,8 @@ train_data.columns = [''] * len(train_data.columns)
       Y_train.append(np.array(train.iloc[i+pastDay:i+pastDay+futureDay]["RS"])) #分割輸出label
 ```
 3. 建構模型
-輸入層：24*1
-輸出層：24*1
+* 輸入層：(24,1)
+* 輸出層：(24,1)
 
 
 ## 交易邏輯
