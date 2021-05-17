@@ -19,7 +19,7 @@
 * 其整體資料分布如下圖所示。    
 ![surplus power](https://github.com/vf19961226/DSAI_HW3/blob/main/figure/Surplus_Power.png "surplus power") 
 ### 資料前處理
-* 前處理方法：RobustScaler
+* 前處理方法：計算淨用電量與RobustScaler
 * 概述：將產電資料與用電資料相減取得每日淨用電量，在使用RobustScaler進行資料處理。RobustScaler是使用中位數和四分位數，確保每個特徵的統計屬性都位於同一範圍。它會忽略與其他點有很大不同的數據點，即忽略異常值outlier。其公式如下圖所示。其中X'為新數據、X為舊數據、X.median為數據之中位數、IQR為數據之四分衛距。
 * 公式：X' = (X - X.median) / IQR
 * 處理後結果如下圖所示。    
