@@ -1,6 +1,18 @@
 # DSAI_HW3
 ## 摘要
-本專案目的為使用過去發電量以及用電量資料建構一長短期記憶（Long Short-Term Memory，LSTM）模型，用過去七天的資料預測未來一天的用電情形，並將此模型用於
+本專案目的為使用過去發電量以及用電量資料建構一長短期記憶（Long Short-Term Memory，LSTM）模型，用過去七天的資料預測未來一天的用電情形，並將結果用於DSAI課程中電力交易之系統。
+
+## 使用環境
+本專案之開發環境如下表所示，並提供[**requirements.txt**](https://github.com/vf19961226/DSAI_HW3/tree/main/requirements.txt)以及[**Pipfile**](https://github.com/vf19961226/DSAI_HW3/tree/main/Pipfile)方便安裝環境。
+
+|Package|Version|
+|:---:|:---:|
+|Python|3.8.8
+|Tensorflow|2.3
+|Pandas|1.2.4
+|Numpy|1.18.5
+|Keras|2.4.3
+|Scikit-learn|0.24.1
 
 ## 訓練資料
 使用課程提供之訓練數據，先將資料進行前處理後，以便進行後續訓練。
