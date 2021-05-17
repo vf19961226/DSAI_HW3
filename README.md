@@ -49,7 +49,10 @@ train_data.columns = [''] * len(train_data.columns)
 3. 建構模型
 * 輸入層：(24,1)
 * 輸出層：(24,1)
+![structure](https://github.com/vf19961226/DSAI_HW3/blob/main/figure/structure.png) 
 
+4. 訓練結果
+![RS](https://github.com/vf19961226/DSAI_HW3/blob/main/figure/RS.png)
 
 ## 交易邏輯
 使用上述模型訓練出之模型進行淨用電量預測，當預測出淨用電量為負的，則需要購買電以補足缺口，而購買價格需比市場電價電價來得低，目前市場電價1度約為2.5元新台幣。當預測出淨用電量為正，則代表有多餘的電力可以出售，而出售價格訂定為1度1新台幣。期望達成淨用電量為0的目標。
